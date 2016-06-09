@@ -1,0 +1,37 @@
+﻿
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">FAQ Liste</h3>
+    </div>
+
+    <div class="panel-body">
+
+        <p>Søk i spørsmål og svar.</p>
+
+
+        <input ng-model="searchText" class="form-control" placeholder="Skriv noe..." size="100" />
+
+        <br />
+
+        <p>Velg tilhørende kategory:</p>
+
+        <span ng-repeat="category in categories" ng-model="models.category">
+            <button class="btn btn-default" ng-click="selectByCategory(category.Name);">{{category.Name}}</button>
+        </span>
+
+        <div ng-show="IsLoading" style="color:red;"><b>Henter informasjon...</b></div>
+
+        <div style="margin-top:20px;">
+            <accordion close-others="oneAtATime" ng-repeat="item in subquestions | filter:searchText | orderBy: '-ViewCount'">
+                <accordion-group heading="{{item.QuestionText}}" is-open="isOpen" ng-click="opened(item, $index)" ng-hide="item.excludedByFilter">
+                    <p>Kategory: <b>{{item.Category.Name}}</b></p>
+
+                    <div ng-show="!item.Answer.length" style="color:red">Svar er ikke ennå registrer.</div>
+                    <p ng-show="item.Answer.length" style="color:#04901b">Svar: {{item.Answer}}</p>
+                    <p style="font-size:10px;">Dette spørsmålet er {{item.ViewCount}} ganger besøkt</p>
+
+                </accordion-group>
+            </accordion>
+        </div>
+    </div>
+</div>

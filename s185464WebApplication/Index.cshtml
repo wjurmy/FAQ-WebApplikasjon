@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="FaqAngularJSApp" ng-controller="LandingPageController">
+<head>
+    <meta name="viewport" content="width=device-width" />
+ 
+    <title>Mest spurte spørsmål</title>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js" /></script>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet" />
+    <!--[if IE 7]>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome-ie7.min.css" rel="stylesheet" />
+    <![endif]-->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/siteStyle.css" rel="stylesheet" />
+</head>
+
+<div class="main_container">
+    <body class="container">
+        <header>
+            <h2>Kundestøtte for produkter og tekniske spørsmål</h2>
+        </header>
+
+        <ul class="nav">
+            <li><a class="profile" href="/#/faq"><i class="icon-user"></i>FAQ Liste</a></li>
+            <li><a class="settings" href="/#/addNew"><i class="icon-cog"></i>Still et spørsmål </a></li>
+            <li><a class="messages" href="/#/subqs"><i class="icon-envelope-alt"></i>Behandle spørsmål<em>5</em></a></li>
+            <li><a class="info" href="/#/info"><i class="icon-signout"></i>Readme</a></li>
+        </ul>
+
+        <div class="row">
+            <div class="col-md-7" ng-view style="width: 70%; float: right;margin-top: 20px;"></div>
+            <footer class="col-md-12">&copy; s185464</footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js"></script>
+        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="~/Scripts/Controllers/LandingPageController.js"></script>
+        <script src="~/Scripts/Controllers/FaqController.js"></script>
+        <script src="~/Scripts/FaqAngularJSApp.js"></script>
+    </body>
+</div>
+</html>

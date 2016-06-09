@@ -1,0 +1,52 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Noe du lurer på?</h3>
+    </div>
+
+    <div class="panel-body">
+        <form name="frm2" ng-submit="addQuestion()">
+
+            <div class="form-group">
+                <label for="category">Velg Katagory:</label>
+                <select ng-model="models.category" ng-options="category.Name for category in categories" 
+                        class="form-control " required>
+                    <option value="">-- Velg Kategory --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Name">Navn:</label>
+                <input type="text" class="form-control" ng-model="models.name" name="control_name" 
+                       placeholder="Skriv navn" required ng-pattern="/^[a-zæøåA-ZÆØÅ. \\-]{2,30}$/"/>
+            </div>
+
+            <p class="label label-info" ng-show="frm2.control_name.$error.pattern" style="color:#ffffff">
+                Ikke en gjeldig navn.
+            </p>
+
+
+            <div class="form-group">
+                <label for="question">E-post:</label>
+                <input type="text" class="form-control" ng-model="models.email" name="control_email"
+                       placeholder="Skriv e-post" required/>
+            </div>
+            
+
+            <div class="form-group">
+                
+                <label for="question">Spørsmål:</label>
+                <textarea rows="5" cols="40" class="form-control" id="question" name="control_text"
+                          ng-model="models.question" required ng-pattern="/^[a-zæøåA-ZÆØÅ. \\-]{2,1500}$/"></textarea>
+            </div>
+            <p class="label label-info" ng-show="frm2.control_text.$error.pattern" style="color:#ffffff">
+                Ikke en gjeldig spørsmål.
+            </p>
+
+
+            <button type="submit" class="btn btn-default" 
+                    ng-disabled="frm2.control_name.$error.pattern || frm2.control_text.$error.pattern">Send inn</button>
+        </form>
+
+
+    </div>
+</div>

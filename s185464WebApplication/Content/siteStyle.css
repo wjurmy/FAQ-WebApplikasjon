@@ -1,0 +1,139 @@
+﻿ul.nav {
+    position: relative;
+    background: #fff;
+    width: 27%;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    float: left;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main_container {
+    background-color: white;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.nav li a {
+    width: 250px;
+    padding-left: 20px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #686868;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+    .nav li a:hover {
+        background: #efefef;
+    }
+
+    .nav li a.profile {
+        border-left: 5px solid #008747;
+    }
+
+    .nav li a.messages {
+        border-left: 5px solid #fecf54;
+    }
+
+    .nav li a.settings {
+        border-left: 5px solid #cf2130;
+    }
+
+    .nav li a.info {
+        border-left: 5px solid #dde2d5;
+    }
+
+.nav li:first-child a:hover, .form li:first-child a {
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.nav li:last-child a:hover, .form li:last-child a {
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+.nav li a:hover i {
+    color: #ea4f35;
+}
+
+.nav i {
+    margin-right: 15px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.nav em {
+    font-size: 10px;
+    background: #ea4f35;
+    padding: 3px 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-style: normal;
+    color: #fff;
+    margin-top: 17px;
+    margin-right: 15px;
+    line-height: 10px;
+    height: 10px;
+    float: right;
+}
+
+.nav li.selected a {
+    background: #efefef;
+}
+
+h1 {
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    width: 300px;
+    text-align: center;
+}
+
+
+p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    clear: both;
+    border-top: 4px double #eee;
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    background: #f0f0f0 url() repeat top left;
+    background-image: url('img/body_background.png');
+}
+
+header {
+    text-align: center;
+    padding-bottom: 2%;
+}
